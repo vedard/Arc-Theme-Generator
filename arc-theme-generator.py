@@ -35,6 +35,12 @@ class ArcThemeVariant:
         "#5b627b": "#505050",  # Dark Switch Background
         "#353a47": "#232323",  # Dark Switch Circle
         "#cfd6e6": "#dbdbdb",  # Light Switch Background
+        "#444a58": "#2F2F2F",  # Gtk2 Dark Button Background
+        "#505666": "#3B3B3B",  # Gtk2 Dark Button-Hover Background
+        "#3e4351": "#282828",  # Gtk2 Dark Button-insensitive Background
+        "#2e3340": "#181818",  # Gtk2 Dark Button-active Background
+        "#4b5162": "#3C3C3C",  # Gtk2 Dark Tooltips Background
+        "#3e4350": "#2C2C2C",  # Gtk2 Dark Insensitive Background
     }
 
     GREY = {
@@ -53,6 +59,12 @@ class ArcThemeVariant:
         "#5b627b": "#6b6b6b",  # Dark Switch Background
         "#353a47": "#3E3E3E",  # Dark Switch Circle
         "#cfd6e6": "#dbdbdb",  # Light Switch Background
+        "#444a58": "#4a4a4a",  # Gtk2 Dark Button  Background
+        "#505666": "#565656",  # Gtk2 Dark Button-Hover Background
+        "#3e4351": "#434343",  # Gtk2 Dark Button-insensitive Background
+        "#2e3340": "#333333",  # Gtk2 Dark Button-active Background
+        "#4b5162": "#575757",  # Gtk2 Dark Tooltips Background
+        "#3e4350": "#474747",  # Gtk2 Dark Insensitive Background
     }
 
 
