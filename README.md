@@ -1,6 +1,10 @@
 # Arc Theme Generator
 This script let you replace colors in the arc-theme by updating every `.scss`, `.svg`, `.xml`, `.rc` and `gtkrc` files and re-rendering assets
 
+## Prerequisites
+-   Inkscape
+-   Optipng
+
 ## Usage
 1. Clone the arc-theme repository
 2. Run arc-theme-generator
