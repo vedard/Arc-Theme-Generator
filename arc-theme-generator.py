@@ -21,6 +21,7 @@ class ArcThemeVariant:
 
     BLACK = {
         "#252a35": "#121212",  # Gnome Panel Background
+        "#262932": "#101010",  # Dark WM bordard
         "#2f343f": "#1d1d1d",  # Dark Header BG
         "#e7e8eb": "#e8e8e8",  # Light Header BG
         "#383c4a": "#252525",  # Dark Background
@@ -32,6 +33,7 @@ class ArcThemeVariant:
         "#bac3cf": "#c4c4c4",  # Dark SideBar Foreground (Nautilus)
         "#323644": "#202020",  # Dark Gnome Shell Modal background
         "#5c616c": "#616161",  # Light Gnome Shell Foreground
+        "#2d323d": "#171717",  # Dark Checkbox Background
         "#5b627b": "#505050",  # Dark Switch Background
         "#353a47": "#232323",  # Dark Switch Circle
         "#cfd6e6": "#dbdbdb",  # Light Switch Background
@@ -41,10 +43,19 @@ class ArcThemeVariant:
         "#2e3340": "#181818",  # Gtk2 Dark Button-active Background
         "#4b5162": "#3C3C3C",  # Gtk2 Dark Tooltips Background
         "#3e4350": "#2C2C2C",  # Gtk2 Dark Insensitive Background
+        "#262934": "#0E0E0E",  # Gtk2 Dark checkbox-unchecked border
+        "#2b303b": "#151515",  # Gtk2 Dark checkbox-unchecked Background
+        "#3e434f": "#282828",  # Gtk2 Dark scrollbar Background
+        "#2d303b": "#151515",  # Gtk2 Dark trough Background
+        "#767b87": "#606060",  # Gtk2 Dark slider Background
+        "#303440": "#191919",  # Gtk2 Dark border insensitive
+        "#2b2e39": "#131313",  # Gtk2 Dark border
+        "#313541": "#1a1a1a",  # Gtk2 Dark inline toolbar
     }
 
     GREY = {
         "#252a35": "#2d2d2d",  # Gnome Panel Background
+        "#262932": "#2b2b2b",  # Dark WM bordard
         "#2f343f": "#383838",  # Dark Header BG
         "#e7e8eb": "#e8e8e8",  # Light Header BG
         "#383c4a": "#404040",  # Dark Background
@@ -57,6 +68,7 @@ class ArcThemeVariant:
         "#323644": "#3b3b3b",  # Dark Gnome Shell Modal background
         "#5c616c": "#636363",  # Light Gnome Shell Foreground
         "#5b627b": "#6b6b6b",  # Dark Switch Background
+        "#2d323d": "#323232",  # Dark Checkbox Background
         "#353a47": "#3E3E3E",  # Dark Switch Circle
         "#cfd6e6": "#dbdbdb",  # Light Switch Background
         "#444a58": "#4a4a4a",  # Gtk2 Dark Button  Background
@@ -65,6 +77,14 @@ class ArcThemeVariant:
         "#2e3340": "#333333",  # Gtk2 Dark Button-active Background
         "#4b5162": "#575757",  # Gtk2 Dark Tooltips Background
         "#3e4350": "#474747",  # Gtk2 Dark Insensitive Background
+        "#262934": "#292929",  # Gtk2 Dark checkbox-unchecked border
+        "#2b303b": "#303030",  # Gtk2 Dark checkbox-unchecked Background
+        "#3e434f": "#434343",  # Gtk2 Dark scrollbar Background
+        "#2d303b": "#303030",  # Gtk2 Dark trough Background
+        "#767b87": "#7b7b7b",  # Gtk2 Dark slider Background
+        "#303440": "#343434",  # Gtk2 Dark border insensitive
+        "#2b2e39": "#2e2e2e",  # Gtk2 Dark border
+        "#313541": "#353535",  # Gtk2 Dark inline toolbar
     }
 
 
