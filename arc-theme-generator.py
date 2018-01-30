@@ -91,6 +91,8 @@ class ArcThemeVariant:
 class ArcThemeGenerator:
     def __init__(self, cwd):
         self.cwd = pathlib.Path(cwd)
+        if not self.cwd.exists():
+            raise ValueError(str(cwd) + " does not exist")
 
     def replace_color(self, color, subtheme):
         print("Replacing colors...")
@@ -161,11 +163,14 @@ if __name__ == "__main__":
                         version='Arc-Theme-Generator 0.0')
     args = parser.parse_args()
 
-    at = ArcThemeGenerator(args.directory)
-    at.replace_color(args.color, args.variant)
+    try:
+        at = ArcThemeGenerator(args.directory)
+        at.replace_color(args.color, args.variant)
 
-    if args.without_bold:
-        at.remove_bold_font()
+        if args.without_bold:
+            at.remove_bold_font()
 
-    if not args.no_assets:
-        at.render_assets(args.threads)
+        if not args.no_assets:
+            at.render_assets(args.threads)
+    except ValueError as e:
+        print(e)
