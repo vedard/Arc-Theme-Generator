@@ -1,6 +1,7 @@
 #! /bin/python3
 
 import re
+import os
 import pathlib
 import subprocess
 import argparse
@@ -140,7 +141,7 @@ class ArcThemeGenerator:
 
     def __render_assets(self, path):
         print("  Rendering: " + path.parent.name)
-        subprocess.check_output(str(path), cwd=path.parent)
+        subprocess.check_output(['bash', str(path.name)], cwd=path.parent)
         print("  Finished: " + path.parent.name)
 
 
