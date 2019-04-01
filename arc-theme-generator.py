@@ -123,27 +123,6 @@ class ArcThemeGenerator:
                     file.seek(0)
                     file.write(content)
 
-    def render_assets(self, threads):
-        print("Rendering assets...")
-        pool = multiprocessing.pool.ThreadPool(threads)
-        for path in self.cwd.rglob("./**/render-assets.sh"):
-            if not path.parent.is_symlink():
-                assets_folder = [path.parent / "assets",
-                                 path.parent / "assets-dark"]
-
-                for folder in assets_folder:
-                    if folder.exists():
-                        [x.unlink() for x in (folder).glob("*")]
-
-                pool.apply_async(self.__render_assets, args=(path, ))
-        pool.close()
-        pool.join()
-
-    def __render_assets(self, path):
-        print("  Rendering: " + path.parent.name)
-        subprocess.check_output(['bash', str(path.name)], cwd=path.parent)
-        print("  Finished: " + path.parent.name)
-
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description='Generate a custom Arc-Theme')
@@ -156,10 +135,6 @@ if __name__ == "__main__":
                         help='Preconfigured background and header colors')
     parser.add_argument('--without-bold', action='store_true',
                         help='Replace all bold font with normal font')
-    parser.add_argument('--no-assets', action='store_true',
-                        help='Do not render assets (Faster)')
-    parser.add_argument('--threads', '-t', action='store', default=2, type=int,
-                        help='Number of threads to render assets')
     parser.add_argument('--version', '-v', action='version',
                         version='Arc-Theme-Generator 0.0')
     args = parser.parse_args()
@@ -170,8 +145,5 @@ if __name__ == "__main__":
 
         if args.without_bold:
             at.remove_bold_font()
-
-        if not args.no_assets:
-            at.render_assets(args.threads)
     except ValueError as e:
         print(e)
